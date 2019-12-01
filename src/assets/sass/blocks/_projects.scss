@@ -1,0 +1,25 @@
+.projects {
+    background-color: #181818;
+    color: $white;
+
+    &__wrap {
+        padding-top: 5px;
+        padding-bottom: 30px;
+        height: 100%;
+        
+        position: relative;
+    }
+
+    &__slides {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    &__title {
+        margin: 0 0 20px 0;
+        font-size: px-to-rem(32px);
+        line-height: px-to-rem(37px);
+        text-align: center;
+        color: $primary;
+    }
+}
