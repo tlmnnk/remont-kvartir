@@ -1,0 +1,114 @@
+.works-list {
+    background: url('../img/list-of-works-bg.jpg') center top $black;
+    background-size: cover;
+    position: relative;
+    color: $white;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $gradient;
+        z-index: -1;
+    }
+
+    &__wrap {
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+
+    &__title {
+        margin: 0 0 24px 0;
+        @include title();
+    }
+
+    &__block {
+        margin: 24px 0;
+    }
+
+    &__item {
+        padding: 0 24px;
+        margin-bottom: 24px;
+        border: 1px solid #2f2f2f;
+        border-radius: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 37px;
+            height: 2px;
+            background-color: $primary;
+            display: block;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: px-to-rem(17px);
+            line-height: px-to-rem(24px);
+
+            &:first-child {
+                font-size: px-to-rem(18px);
+                line-height: px-to-rem(21px);
+            }
+        }
+    }
+}
+
+@media (min-width: 580px) {
+    .works-list {
+        &__block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        &__item {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .works-list {
+        &__block {
+            grid-template-columns: repeat(3, 1fr);
+           
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .works-list {
+        &__block {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+        }
+
+        &__title {
+            text-align: left;
+        }
+
+        &__item {
+            p {
+                font-size: px-to-rem(14px);
+                line-height: px-to-rem(22px);
+
+                &:first-child {
+                    font-size: px-to-rem(16px);
+                    line-height: px-to-rem(19px);
+                }
+            }
+        }
+    }
+}
