@@ -1,0 +1,94 @@
+.calc {
+    &__radio {
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked {
+
+                + label {
+                    &::before {
+                        content: '';
+                        width: 8px;
+                        height: 3px;
+                        border-left: 2px solid $primary;
+                        border-bottom: 2px solid $primary;
+                        position: absolute;
+                        left: 3px;
+                        top: 8px;
+                        transform: rotate(-45deg);
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+        label {
+            padding-left: 25px;
+            font-size: px-to-rem(17px);
+            line-height: px-to-rem(24px);
+            position: relative;
+            display: block;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                width: 16px;
+                height: 16px;
+                border: 1px solid $primary;
+                border-radius: 5px;
+                background-color: transparent;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__group {
+        margin: 20px 0;
+        padding: 0;
+        border: none;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: px-to-rem(14px);
+        line-height: px-to-rem(16px);
+        font-weight: 700;
+    }
+
+    &__range {
+        display: none;
+
+        label {
+            @include visually-hidden;
+        }
+    }
+
+    &__square {
+        padding: 12px 0;
+        width: 100%;
+        font-size: px-to-rem(14px);
+        line-height: px-to-rem(16px);
+        color: $white;
+        text-align: center;
+        display: block;
+        background-color: transparent;
+        border: 1px solid rgba(255,255,255, .2);
+    }
+
+    &__btn {
+        @include btn();
+    }
+
+    &__result {
+        margin: 20px 0;
+        font-size: px-to-rem(17px);
+        line-height: px-to-rem(24px);
+        text-align: center;
+    }
+}

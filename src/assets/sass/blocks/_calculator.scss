@@ -1,0 +1,26 @@
+.calculator {
+    color: $white;
+    background-color: #181818;
+
+    &__wrap {
+        padding-top: 100px;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    &__title {
+        margin: 0 0 20px 0;
+        font-size: px-to-rem(32px);
+        line-height: px-to-rem(37px);
+        font-weight: 700;
+        color: $primary;
+        text-align: center;
+    }
+
+    &__img {
+        margin: 24px auto 30px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
