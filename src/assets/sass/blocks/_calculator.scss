@@ -1,6 +1,7 @@
 .calculator {
     color: $white;
     background-color: #181818;
+    position: relative;
 
     &__wrap {
         padding-top: 100px;
@@ -22,5 +23,29 @@
         max-width: 100%;
         height: auto;
         display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .calculator {
+        
+        &__title {
+            padding-left: 465px;
+            text-align: left;
+        }
+
+        &__img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(calc(-50% + 25px));
+        }
+
+        &__form {
+            margin-left: 350px;
+            padding-top: 5px;
+            padding-bottom: 25px;
+            padding-left: 215px;
+        }
     }
 }
