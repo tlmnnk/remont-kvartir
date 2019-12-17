@@ -22,6 +22,15 @@ $(document).ready(function() {
 			$('.projects__big img').attr('src', $(this).attr("data-src"));
 		}
 
+	$(document).on('input', '.calc', changeRange);
+
+	function changeRange(event) {
+		event.preventDefault();
+		$(this).find('.calc__range output').val($(this).find('.calc__range input').val());
+	}
+	
+	
+
 	$('a[href*="#"]').on('click', function(e){
 		$('html,body').animate({
 			scrollTop: $($(this).attr('href')).offset().top - 100

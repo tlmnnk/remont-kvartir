@@ -188,6 +188,36 @@
                 cursor: pointer;
                 border-radius: 10px;
             }
+
+            &::-webkit-slider-thumb {
+                margin-top: -2px;
+                width: 8px;
+                height: 8px;
+                background-color: $primary;
+                border-radius: 8px;
+                cursor: pointer;
+                -moz-appearance: none;
+            }
+
+            &::-moz-range-thumb {
+                margin-top: -2px;
+                width: 8px;
+                height: 8px;
+                background-color: $primary;
+                border-radius: 8px;
+                cursor: pointer;
+                -moz-appearance: none;
+            }
+
+            &::-ms-thumb {
+                margin-top: -2px;
+                width: 8px;
+                height: 8px;
+                background-color: $primary;
+                border-radius: 8px;
+                cursor: pointer;
+                -moz-appearance: none;
+            }
         }
 
     }

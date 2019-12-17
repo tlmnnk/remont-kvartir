@@ -1958,4 +1958,34 @@ body {
         cursor: pointer;
         border-radius: 10px;
     }
+
+    .calc input[type='range']::-webkit-slider-thumb {
+        margin-top: -2px;
+        width: 8px;
+        height: 8px;
+        background-color: #4AF6CD;
+        border-radius: 8px;
+        cursor: pointer;
+        -moz-appearance: none;
+    }
+
+    .calc input[type='range']::-moz-range-thumb {
+        margin-top: -2px;
+        width: 8px;
+        height: 8px;
+        background-color: #4AF6CD;
+        border-radius: 8px;
+        cursor: pointer;
+        -moz-appearance: none;
+    }
+
+    .calc input[type='range']::-ms-thumb {
+        margin-top: -2px;
+        width: 8px;
+        height: 8px;
+        background-color: #4AF6CD;
+        border-radius: 8px;
+        cursor: pointer;
+        -moz-appearance: none;
+    }
 }
